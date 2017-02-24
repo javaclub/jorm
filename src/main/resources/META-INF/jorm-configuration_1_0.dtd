@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Jorm file-based configuration document.
+-->
+
+<!ELEMENT jorm-configuration (constant*,connections)>
+    
+<!ELEMENT constant EMPTY>
+<!ATTLIST constant name (show_sql|format_sql|jdbc.batch_size|bytecode.provider|session.monitor.check_delay|session.lifetime.auto_close) #REQUIRED>
+<!ATTLIST constant value CDATA #REQUIRED>
+    
+<!ELEMENT property (#PCDATA)>
+<!ATTLIST property name (connection.implementation|connection.dialect|connection.driver|connection.jdbcurl|connection.database|connection.username|connection.password|connection.pool.min|connection.pool.max|jndi.url|connection.pool.c3p0|connection.pool.bonecp|connection.pool.proxool|connection.test.sql) #REQUIRED>
+    
+<!ELEMENT connection (property*)>
+<!ATTLIST connection name CDATA #REQUIRED>
+    
+<!ELEMENT connections (connection+)>
+<!ATTLIST connections default CDATA #REQUIRED>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		the proxool configuration can be embedded within your own
+		application's. Anything outside the "proxool" tag is ignored.
+	-->
+<something-else-entirely>
+
+	<proxool>
+		<alias>dbname</alias> <!--数据源的别名-->
+		<driver-url>jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</driver-url><!-- url连接串 -->
+		<driver-class>com.mysql.jdbc.Driver</driver-class> <!--驱动类-->
+		<driver-properties>
+			<property name="user" value="root" /> <!--用户名-->
+			<property name="password" value="root" /><!--密码-->
+		</driver-properties>
+		<!-- 最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定 -->
+		<maximum-connection-count>18</maximum-connection-count>
+		<!--最小连接数(默认2个)-->
+		<minimum-connection-count>1</minimum-connection-count>
+		<!-- 连接的最长生命期 -->
+		<maximum-connection-lifetime>18000000</maximum-connection-lifetime> <!-- 5 hours -->
+		<!--proxool自动侦察各个连接状态的时间间隔(毫秒),侦察到空闲的连接就马上回收,超时的销毁 默认30秒-->
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<!--没有空闲连接可以分配而在队列中等候的最大请求数,超过这个请求数的用户连接就不会被接受-->
+		<maximum-new-connections>10</maximum-new-connections>
+		<!--最少保持的空闲连接数(默认2个)-->
+		<prototype-count>5</prototype-count>
+		<!--在使用之前测试-->
+		<test-before-use>true</test-before-use>
+		<!--用于保持连接的测试语句 -->
+		<house-keeping-test-sql>select 1</house-keeping-test-sql>
+	</proxool>
+	
+</something-else-entirely>

@@ -1,0 +1,94 @@
+TODO
+-------------------------
+> 动态更新
+> 缓存支持
+> 表的自动导出和生成
+
+2011/xx/xx: Version 1.0.8.GA
+-------------------------
+
+ * [47] imp: 在classpath中去自动搜索配置文件jorm.cfg.xml
+
+2011/10/14: Version 1.0.8.RC1
+-------------------------
+ 
+ * [46] add: 加入配置文件jorm.cfg.xml的dtd验证, 详见http://javaclub.sourceforge.net/jorm-configuration_1_0.dtd
+ * [45] add: 配置文件由jdbc.cfg.xml更名为jorm.cfg.xml
+
+2011/10/10: Version 1.0.7.GA
+-------------------------
+ 
+ * [44] add: 自动管理session的生命周期
+ * [43] add: one-to-many和many-to-one的级联加载支持
+ * [42] imp: 更改统计接口方法返回类型为long
+ * [41] imp: 一对多处理性能提升
+ * [40] add: 支持PostgreSQL的自增ID类型serial
+ * [39] imp: 优化加载基本类型对象的处理
+ * [38] add: 加入identity主键生成策略(MySQL、MSSQL、PostgreSQL等)
+ * [37] imp: SQLServer2000和SQLServer2005分页的兼容性
+ * [36] add: 主键生成策略identity
+
+2011/09/23: Version 1.0.6
+-------------------------
+
+ * [35] fix: oracle下一个分页取limit数错误的bug.
+ * [34] fix: oracle下检测是否支持Savepoints时，一个未捕获的异常.
+ * [33] add: 对bonecp的支持
+ * [32] add: 对proxool的支持
+ * [31] add: 对commons-dbcp的支持
+ * [30] fix: classpath没有config.properties文件会报错
+
+2011/09/20: Version 1.0.5
+-------------------------
+
+ * [29] 增加一对多的关联关系的支持
+ * [28] 取消对dom4j的依赖
+ * [27] 增加对存储过程的支持
+ * [26] 增加一对一关系的级联存储
+ * [25] 支持javassit和cglib两种字节处理api
+ * [24] 加入用主键ID加载对象时的lazy策略
+ * [23] 加入FieldProcessor, 用于在插入之前和加载之后对单个属性做一些转换
+ * [22] 在SqlParams没有设置objectClass且是注解类型的实体对象时，抛出异常
+ * [21] 去掉page方法, 直接通过SqlParams设置分页查询参数
+ * [20] 修复list(SqlParams)方法对字段排序失效的bug
+ * [19] 对非分页的查询增加setFetchSize(int)的支持选项
+ * [18] 加入对批量更新操作的支持
+ * [17] 加入根据sql加载用户自定义对象的方法loadBeans(SqlParams)
+ * [16] jdbc.cfg.xml配置文件增加对多constant的支持
+ * [15] fix bug => 当sql语句中带有DISTINCT关键字时，生成的统计记录总数sql不准确.
+ * [14] 增加对H2数据库的支持
+
+2011/08/06: Version 1.0.4
+-------------------------
+
+ * [13] 解决多线程插入数据时，如果ID为自动增长会出现ID重复的问题
+ * [12] 重构ID生成策略的代码，采用策略和工厂模式
+ * [11] 新增多种ID自动生成策略
+ * [10] 重写SqlDialect
+ * [9]  增加新生成session的方法和释放session的管理
+
+2011/07/19: Version 1.0.3
+-------------------------
+
+ * [8] 加入多关系的处理@Relations
+ * [7] 取消对gerald-commons.jar的依赖
+ * [6] 简化注解Id的书写方式
+
+2011/07/19: Version 1.0.2
+-------------------------
+
+ * [5] 加入事务支持
+
+2011/07/13: Version 1.0.1
+-------------------------
+
+ * [4] 加入一对多、一对一、多对一、多对多等映射关系的支持，见com.github.javaclub.jorm.annotation.Relation
+ 
+
+2011/06/08: Version 1.0.0
+-------------------------
+
+ * [3] 解决主键ID生成时并发问题
+ * [2] 优化sql生成方式
+ * [1] gerald-jorm项目建立，初始化导入
+

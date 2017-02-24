@@ -1,0 +1,1 @@
+sqljdbc.jar is for jdk5 only, sqljdbc4.jar is for jdk6 or later
