@@ -4,7 +4,7 @@ JDBC ORM Framework
 ---
 just a simple jdbc tools
 
-2011年的时候放置在sf.net网站上的，pom依赖
+2011骞寸殑鏃跺�欐斁缃湪sf.net缃戠珯涓婄殑锛宲om渚濊禆
 ```xml
 <dependency>
    <groupId>net.sf.javaclub</groupId>
@@ -13,13 +13,13 @@ just a simple jdbc tools
 </dependency>
 ```
 
-目前迁移到了github
+鐩墠杩佺Щ鍒颁簡github
 ```xml
 <dependency>
    <groupId>com.github.javaclub</groupId>
    <artifactId>jorm</artifactId>
-   <version>1.0.8.GA</version>
+   <version>1.0.8</version>
 </dependency>
 ```
-具体使用教程详见：https://www.oschina.net/p/gerald-jorm
+鍏蜂綋浣跨敤鏁欑▼璇﹁锛歨ttps://www.oschina.net/p/gerald-jorm
 
