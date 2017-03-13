@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.javaclub</groupId>
 	<artifactId>jorm</artifactId>
-	<version>1.0.8-SNAPSHOT</version>
+	<version>1.0.8</version>
 	<packaging>jar</packaging>
 	<name>javaclub-jorm</name>
 	<description>This is a java JDBC ORM Framework</description>
