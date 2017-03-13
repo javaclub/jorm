@@ -1,0 +1,19 @@
+language: java
+jdk:
+#  - oraclejdk8
+#  - oraclejdk7
+#  - openjdk7
+   - openjdk6
+   
+sudo: required
+
+install: true
+
+script: mvn clean package -DskipTests -Dmaven.javadoc.skip=true -DdownloadSources=true -Dgpg.skip=true
+
+notifications:  
+  email:  
+    recipients:  
+      - gerald.chen.hz@gmail.com  
+    #on_success: [always|never|change]  default: change  
+    #on_failure: [always|never|change]  default: always  

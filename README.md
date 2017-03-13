@@ -1,4 +1,4 @@
-# jorm
+# jorm  [![](https://travis-ci.org/jadmin/jorm.svg?branch=master)](https://travis-ci.org/jadmin/jorm)
 
 JDBC ORM Framework
 ---
