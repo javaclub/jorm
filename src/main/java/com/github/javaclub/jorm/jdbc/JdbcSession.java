@@ -148,8 +148,7 @@ public class JdbcSession implements Session {
 			this.autoClose = autoClose;
 			initialize(providerName);
 		} catch (Exception e) {
-			e.printStackTrace();
-			LOG.error(e.getMessage());
+			LOG.error("Jorm JdbcSession initialize error " + e.getMessage(), e);
 			throw new JormException(e);
 		}
 	}

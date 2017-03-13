@@ -34,7 +34,7 @@ public class Jorm {
 		return SessionFactory.newSession();
 	}
 	
-	public static synchronized Session getSession(boolean autoClose) {
+	public static Session getSession(boolean autoClose) {
 		return JdbcSession.getSession(JdbcConfigXmlParser.getDefaultConnectionName(), 
 				               autoClose);
 	}

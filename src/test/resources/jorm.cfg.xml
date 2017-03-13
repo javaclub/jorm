@@ -9,6 +9,7 @@
   <constant name="format_sql" value="true"/>
   <constant name="jdbc.batch_size" value="600" />
   <constant name="bytecode.provider" value="javassist" />
+  <!-- Jorm.getSession(true)时，下面两个参数才有效 -->
   <constant name="session.monitor.check_delay" value="10000" />  <!-- 多长时间检测一次session的有效期 -->
   <constant name="session.lifetime.auto_close" value="60000" /> <!-- 多长时间就自动关闭session -->
   
