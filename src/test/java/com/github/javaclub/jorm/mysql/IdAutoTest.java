@@ -44,12 +44,12 @@ public class IdAutoTest {
 	public void save() {
 		session.clean(IdAuto.class);
 		IdAuto u;
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 100; i++) {
 			u = new IdAuto(Strings.fixed(6));
 			session.save(u);
 		}
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 100; i++) {
 			u = session.read(IdAuto.class, i + 1);
 			System.out.println(u);
 		}
