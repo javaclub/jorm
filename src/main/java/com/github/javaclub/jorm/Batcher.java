@@ -13,7 +13,7 @@ import com.github.javaclub.jorm.jdbc.JdbcException;
  * Executing Batch operation.
  *
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
- * @version $Id: Batcher.java 2011-8-21 下午05:05:42 Exp $
+ * @version $Id: Batcher.java 2011-8-21 17:05:42 Exp $
  */
 public interface Batcher {
 	

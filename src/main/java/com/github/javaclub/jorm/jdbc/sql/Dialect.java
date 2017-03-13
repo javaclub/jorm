@@ -170,7 +170,7 @@ public abstract class Dialect {
 	
 	/**
 	 * Tests if the native database support the specified feture, the <tt>fetureKey</tt> 
-	 * must be {@link Environment.SUPPORT_XXX}.
+	 * must be defined in {@link Environment}.
 	 *
 	 * @param fetureKey the specified feture key
 	 * @return true if support the specified feture, false otherwise

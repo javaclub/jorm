@@ -146,7 +146,7 @@ public class SqlPrepared {
 	/**
 	 * 获取插入实体对象预sql语句
 	 *
-	 * @param model 实体对象
+	 * @param clazz 实体对象
 	 * @return 插入实体的sql
 	 */
 	public static <T> String preparedInsert(Class<T> clazz) {
