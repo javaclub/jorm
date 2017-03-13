@@ -888,47 +888,6 @@ public final class DateTime {
 		}
 	}
 	
-	/**
-     * 将使用的毫秒数转化为可读的字符串, 如1天1小时1分1秒. <BR>
-     * <code>assertEquals("1天1小时1分1秒", DateUtil.timeToString(90061000));</code>
-     * @param msUsed 使用的毫秒数.
-     * @return 可读的字符串, 如1天1小时1分1秒.
-     */
-	public static String timeSpan(long msUsed) {
-		if (msUsed < 0) {
-			return String.valueOf(msUsed);
-		}
-		if (msUsed < 1000) {
-			return String.valueOf(msUsed) + "毫秒";
-		}
-		// 长于1秒的过程，毫秒不计
-		msUsed /= 1000;
-		if (msUsed < 60) {
-			return String.valueOf(msUsed) + "秒";
-		}
-		if (msUsed < 3600) {
-			long nMinute = msUsed / 60;
-			long nSecond = msUsed % 60;
-			return String.valueOf(nMinute) + "分" + String.valueOf(nSecond)
-					+ "秒";
-		}
-		// 3600 * 24 = 86400
-		if (msUsed < 86400) {
-			long nHour = msUsed / 3600;
-			long nMinute = (msUsed - nHour * 3600) / 60;
-			long nSecond = (msUsed - nHour * 3600) % 60;
-			return String.valueOf(nHour) + "小时" + String.valueOf(nMinute) + "分"
-					+ String.valueOf(nSecond) + "秒";
-		}
-
-		long nDay = msUsed / 86400;
-		long nHour = (msUsed - nDay * 86400) / 3600;
-		long nMinute = (msUsed - nDay * 86400 - nHour * 3600) / 60;
-		long nSecond = (msUsed - nDay * 86400 - nHour * 3600) % 60;
-		return String.valueOf(nDay) + "天" + String.valueOf(nHour) + "小时" 
-				+ String.valueOf(nMinute) + "分" + String.valueOf(nSecond) + "秒";
-	}
-
 	public static void main(String[] args) {
 		String input = "2008-05-18 22:18:58";
 		Date date = toDate(input);

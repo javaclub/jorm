@@ -251,12 +251,14 @@ CREATE TABLE `t_onetomany_student` (
    PRIMARY KEY (`id`)                                        
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8; 
 
+DROP TABLE IF EXISTS `t_mtm_course`;
 CREATE TABLE `t_mtm_course` (                             
                 `id` int(11) NOT NULL AUTO_INCREMENT,                   
                 `name` varchar(50) DEFAULT NULL,                        
                 PRIMARY KEY (`id`)                                      
 ) ENGINE=InnoDB;
 
+DROP TABLE IF EXISTS `t_mtm_student`;
 CREATE TABLE `t_mtm_student` (        
                  `id` bigint(20) NOT NULL,           
                  `name` varchar(50) DEFAULT NULL,    
@@ -264,6 +266,7 @@ CREATE TABLE `t_mtm_student` (
                  PRIMARY KEY (`id`)                  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `t_mtm_book_type`;
 CREATE TABLE `t_mtm_book_type` (           
                    `id` bigint(20) NOT NULL,                
                    `type_name` varchar(50) DEFAULT NULL,    
@@ -322,5 +325,7 @@ end$$
 DELIMITER ;
 
 ---------------------------------------------------------------
+
+DROP FUNCTION IF EXISTS `hello_proc`;
 
 CREATE FUNCTION hello_proc(s CHAR(20)) RETURNS CHAR(50) RETURN CONCAT('Hello, ',s,'!');
