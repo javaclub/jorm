@@ -9,7 +9,7 @@ sudo: required
 
 install: true
 
-script: mvn clean package -DskipTests -Dmaven.javadoc.skip=true -DdownloadSources=true -Dgpg.skip=true
+script: mvn clean package -DskipTests -Dmaven.javadoc.skip=true -Dgpg.skip=true
 
 notifications:  
   email:  
