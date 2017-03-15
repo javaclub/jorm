@@ -28,7 +28,7 @@ public class IncreasableIdentifiers {
 
 	private static Log LOG = LogFactory.getLog(AutoIdGenerator.class);
 
-	private static ConcurrentMap<Class, AtomicLong> identifiersHolder = new ConcurrentHashMap<Class, AtomicLong>();
+	private static transient ConcurrentMap<Class, AtomicLong> identifiersHolder = new ConcurrentHashMap<Class, AtomicLong>();
 
 	public synchronized static Serializable getNextIdValue(Session session, Class objectClass, Field idField) {
 		int incrementBy = 1;

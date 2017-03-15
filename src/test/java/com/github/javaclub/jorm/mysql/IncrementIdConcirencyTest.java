@@ -28,18 +28,33 @@ public class IncrementIdConcirencyTest {
 	public static void setUpBeforeClass() throws Exception {
 		session = Jorm.getSession();
 	}
-
+	
 	@Test
-	public void conncurency() throws InterruptedException {
-		// session.clean(MySQLIdIncrementBean.class);
+	public void conncurency_1() throws InterruptedException {
+		//session.clean(MySQLIdIncrementBean.class);
 		// 应该生成20000条记录
 		for (int i = 0; i < 100; i++) {
 			// 建立10个线程
 			new SaveThread(Strings.fixed(3), session, true).start();
-			Thread.sleep(1000L);
+			//Thread.sleep(1000L);
 		}
 		
-		Thread.sleep(3000L);
+		Thread.sleep(30000L);
+		Jorm.free();
+		System.out.println("Hold on ...");
+	}
+
+	@Test
+	public void conncurency_2() throws InterruptedException {
+		//session.clean(MySQLIdIncrementBean.class);
+		// 应该生成20000条记录
+		for (int i = 0; i < 100; i++) {
+			// 建立10个线程
+			new SaveThread(Strings.fixed(3), session, true).start();
+			//Thread.sleep(1000L);
+		}
+		
+		Thread.sleep(30000L);
 		Jorm.free();
 		System.out.println("Hold on ...");
 	}
@@ -65,7 +80,7 @@ class SaveThread extends Thread {
 		
 		MySQLIdIncrementBean u = null;
 		try {
-			for (int i = 0; i < 200; i++) {
+			for (int i = 0; i < 20000; i++) {
 				u = new MySQLIdIncrementBean(Strings.fixed(6));
 				this.session.save(u);
 			}
