@@ -19,7 +19,7 @@ import com.github.javaclub.jorm.jdbc.process.DummyFieldProcessor;
  * Basic
  *
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
- * @version $Id: Basic.java 2011-8-30 下午09:49:40 Exp $
+ * @version $Id: Basic.java 2011-8-30 21:49:40 Exp $
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})

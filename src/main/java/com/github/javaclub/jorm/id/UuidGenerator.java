@@ -29,7 +29,7 @@ public class UuidGenerator implements IdentifierGenerator {
 	}
 
 	public Serializable generate(Session session, Object object, Field field) {
-		return UuidUtil.newUUID();
+		return UuidUtil.jdkUUID();
 	}
 
 	public void setDialect(Dialect dialect) {
