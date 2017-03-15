@@ -46,7 +46,7 @@ public class IncrementIdConcirencyTest {
 
 	@Test
 	public void conncurency_2() throws InterruptedException {
-		//session.clean(MySQLIdIncrementBean.class);
+		session.clean(MySQLIdIncrementBean.class);
 		// 应该生成20000条记录
 		for (int i = 0; i < 100; i++) {
 			// 建立10个线程

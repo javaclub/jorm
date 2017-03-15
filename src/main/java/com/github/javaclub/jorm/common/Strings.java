@@ -25,6 +25,18 @@ public abstract class Strings {
 	private static final Random RANDOM = new Random();
 	
 	public static final String WHITESPACE = " \n\r\f\t";
+	
+	public static String concat(String... array) {
+    	if(null == array || 0 >= array.length) {
+    		return "";
+    	}
+    	StringBuilder sbf = new StringBuilder();
+    	for (String string : array) {
+    		sbf.append(null == string ? "" : string);
+		}
+    	
+    	return sbf.toString();
+    }
 
 	/**
 	 * 字符串是否为<code>null</code>或为<code>""</code>

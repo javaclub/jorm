@@ -70,4 +70,7 @@ public class UserClass {
 				+ ", thread=" + thread + ", threadName=" + threadName + "]";
 	}
 	
+	public static void main(String[] args) {
+		System.out.println(UserClass.class.getName());
+	}
 }
