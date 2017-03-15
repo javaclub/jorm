@@ -27,6 +27,5 @@ public @interface Basic {
 
 	FetchType fetch() default FetchType.EAGER;
 	
-	@SuppressWarnings("unchecked")
 	Class processor() default DummyFieldProcessor.class;
 }
