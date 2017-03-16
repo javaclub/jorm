@@ -1,5 +1,5 @@
 /*
- * @(#)Seqence.java	2017-3-16
+ * @(#)Sequence.java	2017-3-16
  *
  * Copyright (c) 2017. All Rights Reserved.
  *
@@ -14,14 +14,14 @@ import com.github.javaclub.jorm.annotation.PK;
 import com.github.javaclub.jorm.annotation.constant.GenerationType;
 
 /**
- * Seqence
+ * Sequence
  *
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
- * @version $Id: Seqence.java 2017-3-16 02:02:59 Exp $
+ * @version $Id: Sequence.java 2017-3-16 02:02:59 Exp $
  */
 @Entity(table="seqence")
 @PK("seqenceName")
-public class Seqence {
+public class Sequence {
 	
 	@Id(GenerationType.ASSIGNED)
 	@Column("seq_name")
@@ -33,10 +33,10 @@ public class Seqence {
 	@Column("inc_value")
 	private long incrementValue = 1;
 	
-	public Seqence() {
+	public Sequence() {
 	}
 
-	public Seqence(long currentValue, long incrementValue) {
+	public Sequence(long currentValue, long incrementValue) {
 		this.currentValue = currentValue;
 		this.incrementValue = incrementValue;
 	}

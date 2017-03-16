@@ -26,7 +26,7 @@ import com.github.javaclub.jorm.annotation.Id;
  */
 public class IncreasableIdentifiers {
 
-	private static Log LOG = LogFactory.getLog(AutoIdGenerator.class);
+	private static Log LOG = LogFactory.getLog(IncreasableIdentifiers.class);
 
 	private static transient ConcurrentMap<Class, AtomicLong> identifiersHolder = new ConcurrentHashMap<Class, AtomicLong>();
 
