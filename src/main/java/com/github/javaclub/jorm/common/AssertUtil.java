@@ -12,7 +12,7 @@ package com.github.javaclub.jorm.common;
  * AssertUtil
  *
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
- * @version $Id: AssertUtil.java 2011-7-21 下午06:24:28 Exp $
+ * @version $Id: AssertUtil.java 2011-7-21 18:24:28 Exp $
  */
 public abstract class AssertUtil {
 
@@ -58,6 +58,6 @@ public abstract class AssertUtil {
 	}
 
 	public static void hasText(String text) {
-		hasText(text, "[Assertion failed] - this String argument must have text; it must not be null, empty, or blank");
+		hasText(text, "The String argument must have text; it must not be null, empty, or blank");
 	}
 }

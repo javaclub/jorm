@@ -1,10 +1,10 @@
-# jorm
+# jorm  [![](https://travis-ci.org/jadmin/jorm.svg?branch=master)](https://travis-ci.org/jadmin/jorm)
 
 JDBC ORM Framework
 ---
 just a simple jdbc tools
 
-2011ÄêµÄÊ±ºò·ÅÖÃÔÚsf.netÍøÕ¾ÉÏµÄ£¬pomÒÀÀµ
+2011å¹´çš„æ—¶å€™æ”¾ç½®åœ¨sf.netç½‘ç«™ä¸Šçš„ï¼Œpomä¾èµ–
 ```xml
 <dependency>
    <groupId>net.sf.javaclub</groupId>
@@ -13,13 +13,13 @@ just a simple jdbc tools
 </dependency>
 ```
 
-Ä¿Ç°Ç¨ÒÆµ½ÁËgithub
+ç›®å‰è¿ç§»åˆ°äº†githubï¼ŒMaven centralä¸­æœ€æ–°ç‰ˆæœ¬
 ```xml
 <dependency>
    <groupId>com.github.javaclub</groupId>
    <artifactId>jorm</artifactId>
-   <version>1.0.8.GA</version>
+   <version>1.0.9</version>
 </dependency>
 ```
-¾ßÌåÊ¹ÓÃ½Ì³ÌÏê¼û£ºhttps://www.oschina.net/p/gerald-jorm
+å…·ä½“ä½¿ç”¨æ•™ç¨‹è¯¦è§ï¼šhttps://www.oschina.net/p/gerald-jorm
 

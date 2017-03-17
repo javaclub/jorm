@@ -71,6 +71,13 @@ public class ManyToOneWork implements IsolatedWork {
 				}
 			}
 		}
+		// 若主键未赋值
+		if(!IdentifierGeneratorFactory.isFieldInitialized(metadata.identifierField, this.target)) {
+			if(metadata.isIdentityfierNeedAssigned()) {
+				throw new IllegalStateException("The identifierField  => " + metadata.identifierField + " must be initialized.");
+			}
+			session.getPersister().getIdentifierValue(this.target);
+		}
 		sqlParams = session.getPersister().insert(this.target);
 		if(null != batcher) {
 			batcher.addBatch(sqlParams.getSql(false), sqlParams.getParams());

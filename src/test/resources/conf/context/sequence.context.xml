@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="dataSource" class="com.github.javaclub.jorm.datasource.JdbcDataSource" />
+	<bean id="session" class="com.github.javaclub.jorm.jdbc.JdbcSession" />
+	
+	<bean id="sequenceDAO" class="com.github.javaclub.jorm.seqence.impl.DefaultSequenceDAO">
+		<property name="tableName" value="seqence" />
+		<property name="nameColumnName" value="seq_name" />
+		<property name="valueColumnName" value="cur_value" />
+		<property name="step" value="500" />
+		<property name="retryTimes" value="3" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="userSequence" class="com.github.javaclub.jorm.seqence.impl.DefaultSequence">
+		<property name="sequenceDAO" ref="sequenceDAO" />
+		<property name="name" value="user_sequence" />
+	</bean>
+
+</beans>

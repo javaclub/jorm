@@ -16,7 +16,7 @@ import com.github.javaclub.jorm.annotation.Column;
  * createUser,updateUser,createTime,updateTime.
  *
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
- * @version $Id: AbstractCrudedEntity.java 2011-10-10 下午05:02:31 Exp $
+ * @version $Id: AbstractCrudedEntity.java 2011-10-10 17:02:31 Exp $
  */
 public abstract class AbstractCrudedEntity {
 

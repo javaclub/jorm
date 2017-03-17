@@ -24,12 +24,11 @@ import com.github.javaclub.jorm.annotation.Id;
  * @author <a href="mailto:gerald.chen.hz@gmail.com">Gerald Chen</a>
  * @version $Id: IncreasableIdentifiers.java 483 2011-09-26 14:04:43Z gerald.chen.hz $
  */
-@SuppressWarnings("unchecked")
 public class IncreasableIdentifiers {
 
-	private static Log LOG = LogFactory.getLog(AutoIdGenerator.class);
+	private static Log LOG = LogFactory.getLog(IncreasableIdentifiers.class);
 
-	private static ConcurrentMap<Class, AtomicLong> identifiersHolder = new ConcurrentHashMap<Class, AtomicLong>();
+	private static transient ConcurrentMap<Class, AtomicLong> identifiersHolder = new ConcurrentHashMap<Class, AtomicLong>();
 
 	public synchronized static Serializable getNextIdValue(Session session, Class objectClass, Field idField) {
 		int incrementBy = 1;

@@ -7,6 +7,7 @@
 
 package com.github.javaclub.jorm.mysql;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,9 +46,11 @@ public class IdUuidTest {
 	public void save() {
 		session.clean(IdUuid.class);
 		IdUuid u;
+		Serializable id;
 		for(int i = 0; i < 10; i++) {
 			u = new IdUuid(Strings.fixed(6));
-			session.save(u);
+			id = session.save(u);
+			System.out.println(id);
 		}
 		
 	}

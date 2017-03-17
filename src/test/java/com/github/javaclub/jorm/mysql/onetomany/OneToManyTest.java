@@ -48,7 +48,7 @@ public class OneToManyTest {
 		Class bj = new Class("科技联盟");
 		Student stu = null;
 		long start1 = System.currentTimeMillis();
-		for (int i = 0; i < 3 * 1000; i++) {
+		for (int i = 0; i < 3 * 100; i++) {
 			stu = new Student(Strings.fixed(6), DateTime.randomDate(
 					"1982-01-01", "1989-12-31"));
 			bj.addStudent(stu);

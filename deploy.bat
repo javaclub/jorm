@@ -1,2 +1,2 @@
-@call mvn clean deploy -U -Pdev -Dmaven.test.skip=true
+@call mvn clean deploy -U -Dmaven.test.skip=true
 @pause
