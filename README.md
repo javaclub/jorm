@@ -13,7 +13,7 @@ just a simple jdbc tools
 </dependency>
 ```
 
-目前迁移到了github，最新版本
+目前迁移到了github，Maven central中最新版本
 ```xml
 <dependency>
    <groupId>com.github.javaclub</groupId>
