@@ -13,12 +13,12 @@ just a simple jdbc tools
 </dependency>
 ```
 
-目前迁移到了github
+目前迁移到了github，最新版本
 ```xml
 <dependency>
    <groupId>com.github.javaclub</groupId>
    <artifactId>jorm</artifactId>
-   <version>1.0.8</version>
+   <version>1.0.9</version>
 </dependency>
 ```
 具体使用教程详见：https://www.oschina.net/p/gerald-jorm
