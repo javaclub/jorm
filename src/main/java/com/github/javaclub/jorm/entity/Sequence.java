@@ -7,6 +7,8 @@
 
 package com.github.javaclub.jorm.entity;
 
+import java.util.Date;
+
 import com.github.javaclub.jorm.annotation.Column;
 import com.github.javaclub.jorm.annotation.Entity;
 import com.github.javaclub.jorm.annotation.Id;
@@ -28,19 +30,14 @@ public class Sequence {
 	private String seqenceName;
 
 	@Column("cur_value")
-	private long currentValue = 0;
+	private long currentValue;
 	
-	@Column("inc_value")
-	private long incrementValue = 1;
+	@Column("gmt_modified")
+	private Date gmtModified;
 	
 	public Sequence() {
 	}
 
-	public Sequence(long currentValue, long incrementValue) {
-		this.currentValue = currentValue;
-		this.incrementValue = incrementValue;
-	}
-	
 	public String getSeqenceName() {
 		return seqenceName;
 	}
@@ -57,12 +54,12 @@ public class Sequence {
 		this.currentValue = currentValue;
 	}
 
-	public long getIncrementValue() {
-		return incrementValue;
+	public Date getGmtModified() {
+		return gmtModified;
 	}
 
-	public void setIncrementValue(long incrementValue) {
-		this.incrementValue = incrementValue;
+	public void setGmtModified(Date gmtModified) {
+		this.gmtModified = gmtModified;
 	}
 
 }
