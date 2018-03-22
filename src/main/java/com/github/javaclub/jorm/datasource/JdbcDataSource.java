@@ -57,7 +57,7 @@ public class JdbcDataSource extends AbstractDriverBasedDataSource {
 	}
 
 	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-		return null;
+		throw new UnsupportedOperationException("getParentLogger");
 	}
 	
 	
