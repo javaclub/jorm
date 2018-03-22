@@ -9,7 +9,9 @@ package com.github.javaclub.jorm.datasource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import com.github.javaclub.jorm.Environment;
 import com.github.javaclub.jorm.config.JdbcConfigXmlParser;
@@ -53,5 +55,11 @@ public class JdbcDataSource extends AbstractDriverBasedDataSource {
 	protected Connection getConnectionFromDriverManager(String url, Properties props) throws SQLException {
 		return DriverManager.getConnection(url, props);
 	}
+
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		return null;
+	}
+	
+	
 
 }

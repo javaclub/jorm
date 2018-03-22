@@ -69,7 +69,7 @@
 	</distributionManagement>
 
 	<properties>
-		<project.build.jdk.version>1.5</project.build.jdk.version>
+		<project.build.jdk.version>1.7</project.build.jdk.version>
 		<project.build.sourceEncodin>UTF-8</project.build.sourceEncodin>
 		<author.blog>http://hi.baidu.com/jadmin</author.blog>
 		<author.name>Gerald.Chen</author.name>
