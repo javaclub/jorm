@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.javaclub</groupId>
 	<artifactId>jorm</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<packaging>jar</packaging>
 	<name>javaclub-jorm</name>
 	<description>This is a java JDBC ORM Framework</description>
@@ -46,13 +46,14 @@
 			<url>http://demo.com/maven</url>
 			<layout>default</layout>
 		</repository>
-		 -->
+		
 		<repository>
 			<id>proxool</id>
 			<name>proxool-name</name>
 			<url>http://repo.fusesource.com/maven2-all</url>
 			<layout>default</layout>
 		</repository>
+		 -->
 	</repositories>
 
 	<distributionManagement>
@@ -124,6 +125,9 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

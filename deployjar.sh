@@ -1,0 +1,1 @@
+mvn deploy:deploy-file -DgroupId=com.github.javaclub -DartifactId=jorm -Dversion=1.1.1 -Dpackaging=jar -Dfile=./target/jorm-1.1.1.jar -Durl=http://nexus.ops.yangege.cn/repository/maven-releases/ -DrepositoryId=nexus-releases
