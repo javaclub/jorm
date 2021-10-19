@@ -74,7 +74,7 @@ public class Version implements Comparable {
 				}
 			}
 		}
-		catch (NoSuchElementException e) {
+		catch (NoSuchElementException | NumberFormatException e) {
 			throw new IllegalArgumentException("invalid format");
 		}
 
